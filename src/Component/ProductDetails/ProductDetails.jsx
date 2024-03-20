@@ -11,10 +11,11 @@ import { CartContext } from '../Context/CartContext'
 
 export default function ProductDetails(){
 
-  let {addToCart} = useContext(CartContext)
+  let {addToCart , setNumOfCart } = useContext(CartContext)
 async function postToCart(id){
   let{data} = await addToCart(id)
   if(data.status === 'success'){
+    setNumOfCart(data.numOfCartItems);
     toast.success(data.message,{duration :1000})
   }
 }
