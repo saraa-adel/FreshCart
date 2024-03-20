@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 // import style from './Navbar.module.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logo from '../../Assets/images/freshcart-logo.svg'
-import wishlist from '../../Assets/images/wishlist (5).png'
 import {UserContext} from '../Context/UserContext.js'
 import { useSelector } from 'react-redux'
 import { jwtDecode } from "jwt-decode";
